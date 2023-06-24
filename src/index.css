@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #83eaf1, #63a4ff);
+}
+.heading {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #2c0754;
+}
+
+.letter-q {
+  font-size: 48px;
+  font-weight: bold;
+  color: #3485c7;
+}
+
+.quote {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  transition: transform 0.3s;
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover .quote:not(:hover) {
+  transform: scale(0.9);
+}
+
+.quote:hover {
+  transform: scale(1.2);
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #8b00ff
+  );
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  background-size: 600% auto;
+  animation: rainbow 8s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button:hover {
+  animation-play-state: paused;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
