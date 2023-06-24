@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 function App() {
   const [quote, setQuote] = useState('');
-  const [quotes, setQuotes] = useState([]);
+  const [quotes, setQuotes] = useState([{ id: '', quote: '', quotedBy: '' }]);
   useEffect(() => {
     const fetchData = async () => {
       try {
