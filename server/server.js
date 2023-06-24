@@ -33,8 +33,13 @@ const readData = async () => {
   }
 };
 
-// Call the function to read data
+app.get('/', (request, response) => {
+  response.send(
+    '<h1>Hi this is simple API - HIT /quotes for getting all quotes available on server. Have a nice day <3 .</h1>'
+  );
+});
 
+// Call the function to read data
 app.get('/quotes', async (request, response) => {
   const data = await readData();
   response.json(data);
